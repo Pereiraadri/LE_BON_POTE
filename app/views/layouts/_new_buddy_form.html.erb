@@ -1,0 +1,10 @@
+<%= simple_form_for @buddy do |f| %>
+  <%= f.input :first_name, placeholder: 'Put your First Name' %>
+  <%= f.input :last_name, placeholder: 'Put your Last Name' %>
+  <%= f.input :email, placeholder: 'Put your Email' %>
+  <%= f.input :address, placeholder: 'Put your Address' %>
+  <%= f.input :skill, collection: ["Cuisinier", "DJ", "Beau Gosse", "Clown", "Taxi", "Tatoueu(se)r", "Photographe/Vidéaste", "Poto"]%>
+  <%= f.input :description, placeholder: 'Add a description' %>
+  <%= f.input :price, placeholder: 'What is your price ?' %>
+  <%= f.button :submit %>
+<% end %>
