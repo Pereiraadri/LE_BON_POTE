@@ -57,5 +57,4 @@ buddy7.image.attach(io: file7, filename: "oui.jpg", content_type: "image/jpg")
 buddy7.save!
 
 p "Finished"
-p buddy6.email
 p "#{Buddy.count} buddies"
