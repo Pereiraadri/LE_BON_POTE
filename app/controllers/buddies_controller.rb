@@ -3,6 +3,9 @@ class BuddiesController < ApplicationController
       @buddy = buddy.new
   end
 
+  def index
+  end
+
   def create
     @buddy = Buddy.new(buddy_params)
     if @buddy.save
@@ -19,6 +22,6 @@ class BuddiesController < ApplicationController
   private
 
   def buddy_params
-    params.require(:buddy).permit(:name, :email, :phone, :other_attributes)
+    params.require(:buddy).permit(:fist_name, :last_name, :email)
   end
 end
