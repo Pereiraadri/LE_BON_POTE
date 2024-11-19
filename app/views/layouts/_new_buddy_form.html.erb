@@ -6,5 +6,5 @@
   <%= f.input :skill, collection: ["Cuisinier", "DJ", "Beau Gosse", "Clown", "Taxi", "Tatoueu(se)r", "Photographe/Vidéaste", "Poto"]%>
   <%= f.input :description, placeholder: 'Add a description' %>
   <%= f.input :price, placeholder: 'What is your price ?' %>
-  <%= f.button :submit %>
+  <%= f.button :submit, input_html: { class: 'btn btn-primary' } %>
 <% end %>
