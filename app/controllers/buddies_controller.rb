@@ -1,9 +1,10 @@
 class BuddiesController < ApplicationController
   def new
-      @buddy = buddy.new
+      @buddy = Buddy.new
   end
 
   def index
+    @buddies = Buddy.all
   end
 
   def create
