@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-Buddy.create(first_name: "Gordon", last_name: "Bleu", mail: "gordonbleu@gmail.com", skill: "Cuisinier", description: "Frétilleur de Papilles", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.menshealth.com%2Fuk%2Ffitness%2Fa62043427%2Fgordon-ramsay-mens-health%2F&psig=AOvVaw1eTWrCvowGCdl3QPJQAx3i&ust=1732025932238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCID-ysiJ5okDFQAAAAAdAAAAABAE", address: "Buckingham Palace", price: 250, avalaible: true)
+Buddy.create(first_name: "Gordon", last_name: "Bleu", email: "gordonbleu@gmail.com", skill: "Cuisinier", description: "Frétilleur de Papilles", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.menshealth.com%2Fuk%2Ffitness%2Fa62043427%2Fgordon-ramsay-mens-health%2F&psig=AOvVaw1eTWrCvowGCdl3QPJQAx3i&ust=1732025932238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCID-ysiJ5okDFQAAAAAdAAAAABAE", address: "Buckingham Palace", price: 250, avalaible: true)
 
 Buddy.create(first_name: "Amélie", last_name: "Lens", email: "amelielens@gmail.com", skill: "Dj", description: "Je vais te faire bouger le popotin comme personnee", image: "https://i.ytimg.com/vi/oCbUZ9X5Gkw/hqdefault.jpg?v=64d2567c", address: "Tomorrow Land", price: 700, avalaible: true)
 
