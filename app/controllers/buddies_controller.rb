@@ -4,6 +4,7 @@ class BuddiesController < ApplicationController
   end
 
   def index
+    @buddies = Buddy.all
   end
 
   def create
