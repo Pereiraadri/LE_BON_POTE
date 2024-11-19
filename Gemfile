@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
 ruby "3.3.5"
+# Instal cloudinary
+gem "cloudinary"
 # Instal dotenv
 gem "dotenv-rails"
 # Instal devise
