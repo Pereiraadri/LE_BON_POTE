@@ -1,10 +1,11 @@
 class BuddiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def new
-      @buddy = buddy.new
+      @buddy = Buddy.new
   end
 
   def index
+    @buddies = Buddy.all
   end
 
   def create
