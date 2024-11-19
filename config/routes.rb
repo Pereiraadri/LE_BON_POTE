@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   #
-  root to: "pages#home"
-end
+  root to: 'buddies#index'
+
+  resources :buddies, only: [:new, :create, :show]

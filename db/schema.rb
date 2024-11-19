@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_18_144945) do
     t.bigint "user_id", null: false
     t.bigint "buddy_id", null: false
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", null: f/home/sami/code/Samsam69004/LE_BON_POTE/lib/tasksalse
     t.index ["buddy_id"], name: "index_bookings_on_buddy_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
