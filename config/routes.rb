@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   #
   root to: 'buddies#index'
 
-  resources :buddies, only: [:new, :create, :show, :edit] do
-    resources :bookings, only: [:index, :show, :create, :new]
+  resources :buddies, only: [:new, :create, :show] do
+    resources :bookings, only: [:new, :create]
   end
+
+  resources :bookings, only: [:index, :show]
 end
