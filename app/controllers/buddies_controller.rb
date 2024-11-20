@@ -10,8 +10,9 @@ class BuddiesController < ApplicationController
 
   def create
     @buddy = Buddy.new(buddy_params)
+    @buddy.user = current_user
     if @buddy.save
-      redirect_to @buddy, notice: 'Buddy was successfully created.'
+      redirect_to root_path, notice: 'Buddy was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
