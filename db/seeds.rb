@@ -16,8 +16,8 @@ user = User.create!(email: "email@gmail.com", password: "123456")
 
 p "Creating Buddies"
 buddy = Buddy.new(first_name: "Gordon", last_name: "Bleu", email: "gordonbleu@gmail.com", skill: "Cuisinier", description: "Frétilleur de Papilles", address: "Buckingham Palace", price: 250, user: user)
-file = URI.parse("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.menshealth.com%2Fuk%2Ffitness%2Fa62043427%2Fgordon-ramsay-mens-health%2F&psig=AOvVaw1eTWrCvowGCdl3QPJQAx3i&ust=1732025932238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCID-ysiJ5okDFQAAAAAdAAAAABAE").open
-buddy.image.attach(io: file, filename: "ramsay.png", content_type: "image/png")
+file = URI.parse("https://greatcanadian.com/wp-content/uploads/2023/08/Gordon-Ramsay-PR-1-1.jpg").open
+buddy.image.attach(io: file, filename: "ramsay.jpg", content_type: "image/jpg")
 buddy.save!
 
 buddy1 = Buddy.new(first_name: "Amélie", last_name: "Lens", email: "amelielens@gmail.com", skill: "Dj", description: "Je vais te faire bouger le popotin comme personnee", address: "Tomorrow Land", price: 700, user: user)
