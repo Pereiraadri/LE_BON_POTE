@@ -12,6 +12,7 @@
       <th>Skill</th>
       <th>Description</th>
       <th>Actions</th>
+      <th>Prix</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,8 @@
         <td><%= buddy.address %></td>
         <td><%= buddy.skill %></td>
         <td><%= buddy.description %></td>
+        <td><%= buddy.price %></td>
+
         <td>
           <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
         </td>
