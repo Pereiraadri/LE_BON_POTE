@@ -11,8 +11,10 @@
 require "open-uri"
 p "Cleaning the db"
 Buddy.destroy_all
+Booking.destroy_all
 User.destroy_all
 user = User.create!(email: "email@gmail.com", password: "123456")
+##◙booking = Booking.create!(user_id: "current_user", start_date: "18/11/2024", end_date: "19/11/2024", address: "21 rue des Capucins, 69001 Lyon")
 
 p "Creating Buddies"
 buddy = Buddy.new(first_name: "Gordon", last_name: "Bleu", email: "gordonbleu@gmail.com", skill: "Cuisinier", description: "Frétilleur de Papilles", address: "Buckingham Palace", price: 250, user: user)
