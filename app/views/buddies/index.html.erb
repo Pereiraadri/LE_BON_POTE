@@ -12,6 +12,7 @@
       <th>Skill</th>
       <th>Description</th>
       <th>Actions</th>
+      <th>Prix</th>
     </tr>
   </thead>
   <tbody>
@@ -23,10 +24,10 @@
         <td><%= buddy.address %></td>
         <td><%= buddy.skill %></td>
         <td><%= buddy.description %></td>
+        <td><%= buddy.price %></td>
+
         <td>
-          <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %> |
-          <%= link_to 'Edit', edit_buddy_path(buddy), class: 'btn btn-warning' %> |
-          <%= link_to 'Delete', buddy_path(buddy), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
         </td>
       </tr>
     <% end %>
