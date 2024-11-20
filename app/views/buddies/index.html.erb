@@ -24,9 +24,7 @@
         <td><%= buddy.skill %></td>
         <td><%= buddy.description %></td>
         <td>
-          <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %> |
-          <%= link_to 'Edit', edit_buddy_path(buddy), class: 'btn btn-warning' %> |
-          <%= link_to 'Delete', buddy_path(buddy), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
         </td>
       </tr>
     <% end %>

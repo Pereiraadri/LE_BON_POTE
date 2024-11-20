@@ -1,7 +1,7 @@
 class BuddiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def new
-      @buddy = Buddy.new
+    @buddy = Buddy.new
   end
 
   def index
@@ -10,9 +10,8 @@ class BuddiesController < ApplicationController
 
   def create
     @buddy = Buddy.new(buddy_params)
-    @buddy.user = current_user
     if @buddy.save
-      redirect_to root_path, notice: 'Buddy was successfully created.'
+      redirect_to @buddy, notice: 'Buddy was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -25,6 +24,6 @@ class BuddiesController < ApplicationController
   private
 
   def buddy_params
-    params.require(:buddy).permit(:first_name, :last_name, :email, :address, :skill, :description, :price)
+    params.require(:buddy).permit(:fist_name, :last_name, :email, :address, :skill, :description)
   end
 end
