@@ -1,14 +1,14 @@
 class BookingsController < ApplicationController
   def index
-
+    @bookings = Booking.all
   end
 
   def show
-
+    # @booking = Booking.find(params[:id])
   end
 
   def new
-
+    @booking = Booking.new
   end
 
   def create
@@ -17,8 +17,5 @@ class BookingsController < ApplicationController
   private
 
   def params_booking
-
   end
-
-
 end

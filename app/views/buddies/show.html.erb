@@ -36,9 +36,9 @@
 
 
         <!-- Bouton "Book Your Buddy" -->
-        <button class="btn btn-pink text-white fw-bold py-2 px-4"
+        <button class="link-button btn btn-pink text-white fw-bold py-2 px-4"
                 style="background-color: #f48fb1; border: none; border-radius: 8px;">
-          Book your buddy
+          <%= link_to "Book your buddy", new_buddy_booking_path(@buddy)%>
         </button>
       </div>
     </div>
