@@ -1,10 +1,6 @@
 source "https://rubygems.org"
 
 ruby "3.3.5"
-# Instal cloudinary
-gem "cloudinary"
-# Instal dotenv
-gem "dotenv-rails"
 # Instal devise
 gem "devise"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
