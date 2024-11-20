@@ -24,6 +24,6 @@ class BuddiesController < ApplicationController
   private
 
   def buddy_params
-    params.require(:buddy).permit(:fist_name, :last_name, :email, :address, :skill, :description, :price)
+    params.require(:buddy).permit(:first_name, :last_name, :email, :address, :skill, :description, :price)
   end
 end
