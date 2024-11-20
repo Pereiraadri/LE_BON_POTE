@@ -1,10 +1,15 @@
 <div class="bg-dark-green p-4 text-center">
   <h2 class="text-blush mb-0">Book your buddy</h2>
 </div>
+<div class="flex justify-between items-center space-x-4">
 
-<div class="container">
-  <h1> Add a new buddy</h1>
-  <div class="form">
+  <i class="bi bi-camera"></i>
+</div>
+  <div class="form" id="new_form_container">
     <%= render 'layouts/new_buddy_form' %>
   </div>
+
+<div class="bg-blush p-4 text-center">
+  <input type="button" value="Add a buddy">
+
 </div>
