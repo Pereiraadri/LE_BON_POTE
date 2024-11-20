@@ -17,17 +17,21 @@
   </thead>
   <tbody>
     <% @buddies.each do |buddy| %>
-      <tr>
-        <td><%= buddy.first_name %></td>
-        <td><%= buddy.last_name %></td>
-        <td><%= buddy.email %></td>
-        <td><%= buddy.address %></td>
-        <td><%= buddy.skill %></td>
-        <td><%= buddy.description %></td>
-        <td><%= buddy.price %></td>
+      <div class="card" style="width: 18rem;">
+      <div class="card-buddy-image">
+      <%= cl_image_tag buddy.image.key, height: 300, width: 300, crop: :fill, class: "card-img-top" %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= buddy.first_name %></h5>
+        <h5 class="card-skill"><%= buddy.skill %></h5>
+        <p class="card-text"><%= buddy.description %></p>
+        <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
+        <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+      </div>
+    </div>
 
-        <td>
-          <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
+
+
         </td>
       </tr>
     <% end %>
