@@ -1,19 +1,48 @@
 <div class="container mt-4">
-  <h1 class="mb-4">Voici la liste des buddies disponibles</h1>
+  <h1 class="mb-4">Buddy Details</h1>
 
   <div class="card">
     <div class="card-body">
-      <p><strong>First Name:</strong> <%= @buddy.first_name %></p>
-      <p><strong>Last Name:</strong> <%= @buddy.last_name %></p>
-      <p><strong>Email:</strong> <%= @buddy.email %></p>
-      <p><strong>Address:</strong> <%= @buddy.address %></p>
-      <p><strong>Skill:</strong> <%= @buddy.skill %></p>
-      <p><strong>Description:</strong> <%= @buddy.description %></p>
+      <% if @buddy.image.attached? %>
+        <div class="text-center mb-4">
+          <!-- Image responsive -->
+          <%= image_tag @buddy.image, class: "img-fluid rounded", alt: "#{@buddy.first_name} #{@buddy.last_name}", style: "max-width: 300px;" %>
+        </div>
+      <% else %>
+        <div class="text-center mb-4">
+          <%= image_tag "default_image.png", class: "img-fluid rounded", alt: "Default Buddy", style: "max-width: 300px;" %>
+        </div>
+      <% end %>
 
-      <div class="d-flex gap-2">
-        <%= link_to 'Back to List', buddies_path, class: 'btn btn-secondary' %>
+      <!-- Nom et Skill côte à côte -->
+      <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p><strong>First Name:</strong> <%= @buddy.first_name %></p>
+        <p><strong>Skill:</strong> <%= @buddy.skill %></p>
+      </div>
+      <div class="justify-content-between align-items-left mb-3">
+        <p><strong>Last Name:</strong> <%= @buddy.last_name %></p>
+        <p><strong>Email:</strong> <%= @buddy.email %></p>
+        <p><strong>Address:</strong> <%= @buddy.address %></p>
+        <p><strong>Description:</strong> <%= @buddy.description %></p>
+      </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <!-- Prix -->
+        <p class="mb-0 fw-bold" style="font-size: 1.2rem; color: #333;">
+          € <%= @buddy.price %>
+        </p>
+
+
+        <!-- Bouton "Book Your Buddy" -->
+        <button class="link-button btn btn-pink text-white fw-bold py-2 px-4"
+                style="background-color: #f48fb1; border: none; border-radius: 8px;">
+          <%= link_to "Book your buddy", new_buddy_booking_path(@buddy)%>
+        </button>
       </div>
     </div>
   </div>
-  </div>
 </div>
+
+<%= render 'layouts/footer' %>

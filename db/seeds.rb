@@ -35,7 +35,7 @@ file3 = URI.parse("https://www.le-geant-de-la-fete.com/26127-large_default/masqu
 buddy3.image.attach(io: file3, filename: "bozo.jpg", content_type: "image/jpg")
 buddy3.save!
 
-buddy4 = Buddy.new(first_name: "Joe",last_name: "Letaxi", email: "jesuistonsam@gmail.com", skill: "Taxi", description: "Celui qui conduit c'est celui qi ne boit pas", address: "Sur la route", price: 50, user: user)
+buddy4 = Buddy.new(first_name: "Joe",last_name: "Letaxi", email: "jesuistonsam@gmail.com", skill: "Taxi", description: "Celui qui conduit c'est celui qui ne boit pas", address: "Sur la route", price: 50, user: user)
 file4 = URI.parse("https://media.gettyimages.com/id/85647681/fr/photo/taxi-driver.jpg?s=612x612&w=gi&k=20&c=7ZAVR1zmMa6m1lDU_2w8-1AdlRjdQVIPYGmX7avvh_g=
 ").open
 buddy4.image.attach(io: file4, filename: "joe.jpg", content_type: "image/jpg")
