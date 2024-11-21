@@ -6,9 +6,17 @@ class BuddiesController < ApplicationController
 
   def index
     @buddies = Buddy.all
-    if params[:skill].present?
-      @buddies = @buddies.where(skill: params[:skill])
+
+    @markers = @buddies.geocoded.map do |buddy|
+      {
+        lat: buddy.latitude,
+        lng: buddy.longitude
+      }
     end
+
+    return unless params[:skill].present?
+
+    @buddies = @buddies.where(skill: params[:skill])
   end
 
   def create
