@@ -1,5 +1,16 @@
 <header>
-<%= image_tag "logo.png", id:"logo", alt: "logo", class: "logo-top-right"%>
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center position-relative">
+      <!-- Bouton Retour à gauche -->
+      <%= link_to root_path, class: "btn-back" do %>
+        <i class="bi bi-arrow-left"></i> <!-- Utilisation d'une icône Bootstrap pour la flèche -->
+      <% end %>
+
+      <!-- Logo à droite -->
+      <%= image_tag "logo.png", id: "logo", alt: "Logo de l'application", class: "logo-top-right" %>
+    </div>
+  </div>
+</header>
 
 </header>
 <div class="container mt-4">
