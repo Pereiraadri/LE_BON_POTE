@@ -32,3 +32,15 @@
   color:#ea638c;
   text-align: center;
 }
+
+#logo {
+  width: 50px; /* Ajustez la taille pour les écrans mobiles */
+  height: auto;
+}
+
+.logo-top-right {
+  position: absolute; /* Position absolue pour placer l'élément */
+  top: 10px; /* Distance du haut */
+  right: 10px; /* Distance de la droite */
+  z-index: 1000; /* S'assure que le logo reste au-dessus des autres éléments */
+}

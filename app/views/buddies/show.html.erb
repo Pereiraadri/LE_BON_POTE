@@ -1,3 +1,7 @@
+<header>
+<%= image_tag "logo.png", id:"logo", alt: "logo", class: "logo-top-right"%>
+
+</header>
 <div class="container mt-4">
   <h1 class="details-buddy mb-4">Détails du buddy</h1>
 
@@ -21,7 +25,6 @@
       </div>
       </div>
 
-  <!-- Description avec conteneur stylisé -->
   <div class="description-container mb-3">
     <p><strong>Description:</strong>
     <p><%= @buddy.description %></p>
