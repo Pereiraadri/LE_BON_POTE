@@ -22,7 +22,7 @@ file = URI.parse("https://greatcanadian.com/wp-content/uploads/2023/08/Gordon-Ra
 buddy.image.attach(io: file, filename: "ramsay.jpg", content_type: "image/jpg")
 buddy.save!
 
-buddy1 = Buddy.new(first_name: "Amélie", last_name: "Lens", email: "amelielens@gmail.com", skill: "Dj", description: "Je vais te faire bouger le popotin comme personnee", address: "Tomorrow Land", price: 700, user: user)
+buddy1 = Buddy.new(first_name: "Amélie", last_name: "Lens", email: "amelielens@gmail.com", skill: "DJ", description: "Je vais te faire bouger le popotin comme personnee", address: "Tomorrow Land", price: 700, user: user)
 file1 = URI.parse("https://i.ytimg.com/vi/oCbUZ9X5Gkw/hqdefault.jpg?v=64d2567c").open
 buddy1.image.attach(io: file1, filename: "amelie.jpg", content_type: "image/jpg")
 buddy1.save!
@@ -48,7 +48,7 @@ file5 = URI.parse("https://lesnanasdpaname.com/wp-content/uploads/2020/11/neco-5
 buddy5.image.attach(io: file5, filename: "doodie.jpg", content_type: "image/jpg")
 buddy5.save!
 
-buddy6 = Buddy.new(first_name: "Lee",last_name: "Miller",email: "leemiller@gmail.com", skill: "Photographe/Vidéastre", description: "J'immortalise tout vos evenements", address: "Rue des Arts", price: 100, user: user)
+buddy6 = Buddy.new(first_name: "Lee",last_name: "Miller",email: "leemiller@gmail.com", skill: "Photographe/Vidéaste", description: "J'immortalise tout vos evenements", address: "Rue des Arts", price: 100, user: user)
 file6 = URI.parse("https://www.efet.fr/ecole-de-photographie/Qualites-photographe.jpg").open
 buddy6.image.attach(io: file6, filename: "lee.jpg", content_type: "image/jpg")
 buddy6.save!
