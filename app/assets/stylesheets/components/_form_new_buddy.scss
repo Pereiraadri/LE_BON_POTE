@@ -1,0 +1,48 @@
+#new_form_container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #EAEAEA;
+  margin-bottom: 20px;
+  font-family: "Poppins", serif;
+  color: #ea638c;
+  font-weight: bold;
+  background-color: $dark-green;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-name {
+  font-family: "Poppins", serif;
+  color: #ea638c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-text {
+  font-weight: bold;
+  font-family: "Poppins", serif;
+  color: #ea638c !important;
+  text-align: center;
+}
+
+.form-text::placeholder, select.form-text, .form-text, .form-text::file-selector-button {
+  font-weight: bold;
+  font-family: "Poppins", serif;
+  color: #ea638c !important;
+  text-align: center;
+}
+
+.submit {
+  background-color: #ea638c;
+  font-weight: bold;
+  font-family: "Poppins", serif;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}

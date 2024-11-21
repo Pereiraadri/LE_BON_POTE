@@ -1,10 +1,15 @@
-<%= simple_form_for @buddy do |f| %>
-  <%= f.input :first_name, placeholder: 'Put your First Name' %>
-  <%= f.input :last_name, placeholder: 'Put your Last Name' %>
-  <%= f.input :email, placeholder: 'Put your Email' %>
-  <%= f.input :address, placeholder: 'Put your Address' %>
-  <%= f.input :skill, collection: ["Cuisinier", "DJ", "Beau Gosse", "Clown", "Taxi", "Tatoueu(se)r", "Photographe/Vidéaste", "Poto"]%>
-  <%= f.input :description, placeholder: 'Add a description' %>
-  <%= f.input :price, placeholder: 'What is your price ?' %>
-  <%= f.button :submit, input_html: { class: 'btn btn-primary' } %>
-<% end %>
+<div class="form-container w-75 text-center">
+  <%= simple_form_for @buddy do |f| %>
+    <%= f.input :image, label:false, input_html: { class: 'form-text'}, as: :file %>
+    <%= f.input :first_name, label:false, placeholder: 'Put your First Name', input_html: { class: 'form-text'} %>
+    <%= f.input :last_name, label:false, placeholder: 'Put your Last Name', input_html: { class: 'form-text'} %>
+    <%= f.input :email, label:false, placeholder: 'Put your Email', input_html: { class: 'form-text'} %>
+    <%= f.input :address, label:false, placeholder: 'Put your Address', input_html: { class: 'form-text'}  %>
+    <%= f.input :skill, label:false, prompt: 'Choose your Skill', input_html: { class: 'form-text'}, collection: ["Cuisinier", "DJ", "Beau Gosse", "Clown", "Taxi", "Tatoueu(se)r", "Photographe/Vidéaste", "Poto"]%>
+    <%= f.input :description, label:false, placeholder: 'Add a description', input_html: { class: 'form-text'} %>
+    <%= f.input :price, label:false, placeholder: 'What is your price ?', input_html: { class: 'form-text'} %>
+  <div class="submit">
+      <%= f.button :submit, input_html: { class: 'submit' } %>
+    </div>
+  <% end %>
+  </div>
