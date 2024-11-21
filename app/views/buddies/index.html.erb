@@ -18,15 +18,17 @@
                 <h5 class="card-skill"><%= buddy.skill %></h5>
               </div>
               <p class="card-text"><%= buddy.description %></p>
-              <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
+              <div class="btn-showw d-flex justify-content-end">
+                <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-show' %>
+              </div>
               <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
             </div>
           </div>
         <% end %>
       </tbody>
     </table>
-  </div>
-    <%= link_to 'Add a new Buddy', new_buddy_path, class: 'btn btn-primary add-new-buddy-btn' %>
-  </div>
+      </div>
+        <%= link_to 'Add a new Buddy', new_buddy_path, class: 'btn add-new-buddy-btn' %>
+      </div>
 
 </div>
