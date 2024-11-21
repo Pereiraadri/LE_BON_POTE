@@ -18,11 +18,11 @@ user = User.create!(email: "email@gmail.com", password: "123456")
 
 p "Creating Buddies"
 buddy = Buddy.new(first_name: "Gordon", last_name: "Bleu", email: "gordonbleu@gmail.com", skill: "Cuisinier", description: "Frétilleur de Papilles", address: "Buckingham Palace", price: 250, user: user)
-file = URI.parse("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.menshealth.com%2Fuk%2Ffitness%2Fa62043427%2Fgordon-ramsay-mens-health%2F&psig=AOvVaw1eTWrCvowGCdl3QPJQAx3i&ust=1732025932238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCID-ysiJ5okDFQAAAAAdAAAAABAE").open
-buddy.image.attach(io: file, filename: "ramsay.png", content_type: "image/png")
+file = URI.parse("https://greatcanadian.com/wp-content/uploads/2023/08/Gordon-Ramsay-PR-1-1.jpg").open
+buddy.image.attach(io: file, filename: "ramsay.jpg", content_type: "image/jpg")
 buddy.save!
 
-buddy1 = Buddy.new(first_name: "Amélie", last_name: "Lens", email: "amelielens@gmail.com", skill: "Dj", description: "Je vais te faire bouger le popotin comme personnee", address: "Tomorrow Land", price: 700, user: user)
+buddy1 = Buddy.new(first_name: "Amélie", last_name: "Lens", email: "amelielens@gmail.com", skill: "DJ", description: "Je vais te faire bouger le popotin comme personnee", address: "Tomorrow Land", price: 700, user: user)
 file1 = URI.parse("https://i.ytimg.com/vi/oCbUZ9X5Gkw/hqdefault.jpg?v=64d2567c").open
 buddy1.image.attach(io: file1, filename: "amelie.jpg", content_type: "image/jpg")
 buddy1.save!
@@ -37,7 +37,7 @@ file3 = URI.parse("https://www.le-geant-de-la-fete.com/26127-large_default/masqu
 buddy3.image.attach(io: file3, filename: "bozo.jpg", content_type: "image/jpg")
 buddy3.save!
 
-buddy4 = Buddy.new(first_name: "Joe",last_name: "Letaxi", email: "jesuistonsam@gmail.com", skill: "Taxi", description: "Celui qui conduit c'est celui qi ne boit pas", address: "Sur la route", price: 50, user: user)
+buddy4 = Buddy.new(first_name: "Joe",last_name: "Letaxi", email: "jesuistonsam@gmail.com", skill: "Taxi", description: "Celui qui conduit c'est celui qui ne boit pas", address: "Sur la route", price: 50, user: user)
 file4 = URI.parse("https://media.gettyimages.com/id/85647681/fr/photo/taxi-driver.jpg?s=612x612&w=gi&k=20&c=7ZAVR1zmMa6m1lDU_2w8-1AdlRjdQVIPYGmX7avvh_g=
 ").open
 buddy4.image.attach(io: file4, filename: "joe.jpg", content_type: "image/jpg")
@@ -48,7 +48,7 @@ file5 = URI.parse("https://lesnanasdpaname.com/wp-content/uploads/2020/11/neco-5
 buddy5.image.attach(io: file5, filename: "doodie.jpg", content_type: "image/jpg")
 buddy5.save!
 
-buddy6 = Buddy.new(first_name: "Lee",last_name: "Miller",email: "leemiller@gmail.com", skill: "Photographe/Vidéastre", description: "J'immortalise tout vos evenements", address: "Rue des Arts", price: 100, user: user)
+buddy6 = Buddy.new(first_name: "Lee",last_name: "Miller",email: "leemiller@gmail.com", skill: "Photographe/Vidéaste", description: "J'immortalise tout vos evenements", address: "Rue des Arts", price: 100, user: user)
 file6 = URI.parse("https://www.efet.fr/ecole-de-photographie/Qualites-photographe.jpg").open
 buddy6.image.attach(io: file6, filename: "lee.jpg", content_type: "image/jpg")
 buddy6.save!

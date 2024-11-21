@@ -6,6 +6,9 @@ class BuddiesController < ApplicationController
 
   def index
     @buddies = Buddy.all
+    if params[:skill].present?
+      @buddies = @buddies.where(skill: params[:skill])
+    end
   end
 
   def create
