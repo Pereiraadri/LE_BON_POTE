@@ -1,32 +1,35 @@
-<div class="container mt-4">
-  <h1 class="mb-4">Buddy Details</h1>
+<header>
+<%= image_tag "logo.png", id:"logo", alt: "logo", class: "logo-top-right"%>
 
-  <div class="card">
+</header>
+<div class="container mt-4">
+  <h1 class="details-buddy mb-4">Détails du buddy</h1>
+
     <div class="card-body">
       <% if @buddy.image.attached? %>
-        <div class="text-center mb-4">
+    <div class="text-center mb-4">
           <!-- Image responsive -->
-          <%= image_tag @buddy.image, class: "img-fluid rounded", alt: "#{@buddy.first_name} #{@buddy.last_name}", style: "max-width: 300px;" %>
-        </div>
-      <% else %>
-        <div class="text-center mb-4">
-          <%= image_tag "default_image.png", class: "img-fluid rounded", alt: "Default Buddy", style: "max-width: 300px;" %>
-        </div>
-      <% end %>
+      <%= image_tag @buddy.image, class: "image-buddy-show", alt: "#{@buddy.first_name} #{@buddy.last_name}"%>
+    </div>
+    <% else %>
+    <div class="text-center mb-4">
+      <%= image_tag "default_image.png", class: "image-buddy-show", alt: "Default Buddy"%>
+    </div>
+    <% end %>
 
       <!-- Nom et Skill côte à côte -->
       <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <p><strong>First Name:</strong> <%= @buddy.first_name %></p>
-        <p><strong>Skill:</strong> <%= @buddy.skill %></p>
-      </div>
-      <div class="justify-content-between align-items-left mb-3">
-        <p><strong>Last Name:</strong> <%= @buddy.last_name %></p>
-        <p><strong>Email:</strong> <%= @buddy.email %></p>
-        <p><strong>Address:</strong> <%= @buddy.address %></p>
-        <p><strong>Description:</strong> <%= @buddy.description %></p>
+      <div class="d-flex justify-content-between align-items-center sm-3">
+        <p class="buddy-name"><strong>Buddy Name:</strong> <%= @buddy.first_name %></p>
+        <p class="buddy-skill"><strong>Skill:</strong> <%= @buddy.skill %></p>
       </div>
       </div>
+
+  <div class="description-container mb-3">
+    <p><strong>Description:</strong>
+    <p><%= @buddy.description %></p>
+  </div>
+</div>
 
       <div class="d-flex justify-content-between align-items-center mt-4">
         <!-- Prix -->
@@ -42,5 +45,4 @@
         </button>
       </div>
     </div>
-  </div>
 </div>

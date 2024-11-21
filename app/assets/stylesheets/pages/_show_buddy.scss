@@ -1,0 +1,46 @@
+.container {
+  max-width: 500px; /* Limite la largeur sur les grands écrans pour une meilleure lisibilité */
+  margin: 0 auto;
+}
+
+.image-buddy-show {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.description-container {
+  background-color: #ececec;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px; /* Espace interne */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'effet visuel */
+  color: #333; /* Couleur du texte */
+  font-size: 14px; /* Taille du texte */
+  line-height: 1.6; /* Hauteur des lignes pour lisibilité */
+}
+
+.buddy-name {
+  color:#ea638c;
+}
+
+
+.buddy-skill {
+  color:#ea638c;
+}
+
+.details-buddy {
+  color:#ea638c;
+  text-align: center;
+}
+
+#logo {
+  width: 50px; /* Ajustez la taille pour les écrans mobiles */
+  height: auto;
+}
+
+.logo-top-right {
+  position: absolute; /* Position absolue pour placer l'élément */
+  top: 10px; /* Distance du haut */
+  right: 10px; /* Distance de la droite */
+  z-index: 1000; /* S'assure que le logo reste au-dessus des autres éléments */
+}
