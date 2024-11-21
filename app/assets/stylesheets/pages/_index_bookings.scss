@@ -1,0 +1,65 @@
+h1.index {
+  text-align: center;
+  background-color:#ea638c;
+  border-radius: 20px;
+  width: 100%;
+  font-family: sans-serif"Poppins", serif;;
+}
+
+.container-bookings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+.booking-card {
+  border: 1px solid #050000;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buddy-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ea638c;
+}
+
+.buddy-skill {
+  font-size: 16px;
+  color: #ea638c;
+}
+
+.card-image {
+  text-align: center;
+}
+
+.image-booking-index {
+  max-width: 40%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card-dates {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.card-price {
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ea638c;
+}
