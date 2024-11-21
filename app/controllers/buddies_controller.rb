@@ -10,7 +10,9 @@ class BuddiesController < ApplicationController
     @markers = @buddies.geocoded.map do |buddy|
       {
         lat: buddy.latitude,
-        lng: buddy.longitude
+        lng: buddy.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { buddy: buddy }),
+        marker_html: render_to_string(partial: "marker", locals: { buddy: buddy })
       }
     end
 
