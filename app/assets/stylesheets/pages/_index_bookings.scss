@@ -1,9 +1,10 @@
 .index {
   text-align: center;
-  background-color:#0E0000;;
+  background-color: $dark-green;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 100%;
-  font-family: sans-serif"Poppins", serif;;
+  font-family: sans-serif"Poppins", serif;
+  font-weight: bold;
   margin-top: 50px;
   color:#ea638c
 }
