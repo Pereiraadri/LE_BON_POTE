@@ -53,7 +53,7 @@ file6 = URI.parse("https://avatars.githubusercontent.com/u/184087991?v=4").open
 buddy6.image.attach(io: file6, filename: "lee.jpg", content_type: "image/jpg")
 buddy6.save!
 
-buddy7 = Buddy.new(first_name: "Freud", last_name: "Sigmund", email: "ouiouitonami@gmail.com", skill: "Psy", description: "Meet Freud, the group’s resident therapist, secret keeper, and all-around emotional rock. With ears sharper than a hawk’s and a heart bigger than their Spotify playlist, they’re always ready to lend a listening ear—no judgment, just good vibes and the occasional perfect advice.", address: "Toulouse", price: 1, user: user)
+buddy7 = Buddy.new(first_name: "Freud", last_name: "Sigmund", email: "ouiouitonami@gmail.com", skill: "Psy", description: "Meet Freud, the group’s resident therapist, secret keeper, and all-around emotional rock. With ears sharper than a hawk’s and a heart bigger than their Spotify playlist, they’re always ready to lend a listening ear—no judgment, just good vibes and the occasional perfect advice.", address: "Toulouse", price: 220, user: user)
 file7 = URI.parse("https://avatars.githubusercontent.com/u/157475289?v=4").open
 buddy7.image.attach(io: file7, filename: "oui.jpg", content_type: "image/jpg")
 buddy7.save!
