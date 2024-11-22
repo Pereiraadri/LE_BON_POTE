@@ -1,5 +1,4 @@
-<h1 class ="index"> My bookings </h1>
-
+<h1 class ="index"> My bookings</h1>
 <div class="container-bookings">
   <div class="column">
     <% @bookings.each do |booking| %>
@@ -13,7 +12,11 @@
           </div>
         </div>
         <div class="card-image">
-          <%= image_tag booking.buddy.image, class: "image-booking-index", alt: "#{booking.buddy.first_name} #{booking.buddy.last_name}" %>
+          <% if booking.buddy.image.attached? %>
+            <%= image_tag booking.buddy.image, class: "image-booking-index", alt: "#{booking.buddy.first_name} #{booking.buddy.last_name}" %>
+          <% else %>
+            <%= image_tag "default_image.png", class: "image-booking-index", alt: "Default Image" %>
+          <% end %>
         </div>
         <div class="card-dates">
           <p>
@@ -24,7 +27,7 @@
             <strong>End date:</strong> <%= booking.end_date.strftime("%d/%m/%Y") %></p>
         </div>
         <div class="card-price">
-          <p><strong>Price:</strong> <%= "#{booking.buddy.price}€"%></p>
+          <p><strong>Price:</strong> <%= "#{booking.buddy.price}€" %></p>
         </div>
       </div>
     <% end %>

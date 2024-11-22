@@ -1,10 +1,13 @@
-h1.index {
+.index {
   text-align: center;
-  background-color:#ea638c;
-  border-radius: 20px;
+  background-color:#0E0000;;
+  border-radius: 5px;
   width: 100%;
   font-family: sans-serif"Poppins", serif;;
+  margin-top: 50px;
+  color:#ea638c
 }
+
 
 .container-bookings {
   display: flex;
@@ -13,7 +16,7 @@ h1.index {
 }
 
 .booking-card {
-  border: 1px solid #050000;
+  border: 2px solid #050000;
   border-radius: 8px;
   padding: 15px;
   background-color: #fff;
