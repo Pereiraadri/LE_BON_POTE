@@ -1,34 +1,40 @@
-<div class="container-index">
-  <div class="search-bar">
-  <%= render 'layouts/search_header' %>
-  </div>
-  <h1>All Buddies</h1>
+<div class="big-container">
+  <div class="container-index">
+    <div class="search-bar">
+    <%= render 'layouts/search_header' %>
+    </div>
 
-  <%= link_to 'Add a new Buddy', new_buddy_path, class: 'btn btn-primary' %>
 
-  <table>
-    <tbody>
-      <div style="width: 100%; height: 600px;"
+  <div class="buddies-card">
+    <table>
+      <tbody>
+         <div style="width: 100%; height: 600px;"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-      <% @buddies.each do |buddy| %>
-        <div class="card" style="width: 18rem;" id="card-buddy">
-          <div class="card-buddy-image">
-            <%= cl_image_tag buddy.image.key, height: 300, width: 300, crop: :fill, class: "card-img-top" %>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between w-100">
-              <h5 class="card-title"><%= buddy.first_name %></h5>
-              <h5 class="card-skill"><%= buddy.skill %></h5>
+        <% @buddies.each do |buddy| %>
+          <div class="card" style="width: 18rem;" id="card-buddy">
+            <div class="card-buddy-image">
+              <%= cl_image_tag buddy.image.key, height: 300, width: 300, crop: :fill, class: "card-img-top" %>
             </div>
-            <p class="card-text"><%= buddy.description %></p>
-            <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-info' %>
-            <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+            <div class="card-body">
+              <div class="d-flex justify-content-between w-100">
+                <h5 class="card-title"><%= buddy.first_name %></h5>
+                <h5 class="card-skill"><%= buddy.skill %></h5>
+              </div>
+              <p class="card-text"><%= buddy.description %></p>
+              <div class="btn-showw d-flex justify-content-end">
+                <%= link_to 'Show', buddy_path(buddy), class: 'btn btn-show' %>
+              </div>
+              <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </tbody>
-  </table>
+        <% end %>
+      </tbody>
+    </table>
+      </div>
+        <%= link_to 'Add a new Buddy', new_buddy_path, class: 'btn add-new-buddy-btn' %>
+      </div>
+
 </div>

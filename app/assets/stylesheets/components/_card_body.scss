@@ -1,4 +1,9 @@
-
+.big-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+}
 
 #card-buddy{
   border-radius: 5px;
@@ -20,8 +25,35 @@
   color: #ea638c;
   font-weight: bold;
 }
-// #card {
-//   border-radius: 5px;
-//   box-shadow: 0px 5px 5px #EAEAEA;
-//   margin-bottom: 20px;
-// }
+
+.add-new-buddy-btn {
+  background-color: $dark-green;
+  font-family: "Poppins", serif;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #EAEAEA;
+  position: fixed;
+  bottom: 125px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.add-new-buddy-btn :hover {
+  background-color: white;
+  font-family: "Poppins", serif;
+  color: $dark-green;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #EAEAEA;
+}
+
+.btn-show {
+  background-color: $blush;
+  color: $dark-green;
+  box-shadow: 0px 5px 5px #EAEAEA;
+  border-radius: 5px;
+  font-family: "Poppins", serif;
+  font-weight: bold;
+
+}

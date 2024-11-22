@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings.includes(:buddy)
+    # @bookings = Booking.where(user_id: current_user.id)
   end
 
   def show
@@ -27,6 +28,6 @@ class BookingsController < ApplicationController
   private
 
   def params_booking
-    params.require(:booking).permit(:start_date, :end_date, :address)
+    params.require(:booking).permit(:start_date, :end_date, :address, :image)
   end
 end
