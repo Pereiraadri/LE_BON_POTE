@@ -4,7 +4,7 @@
   <div class="relative">
     <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
       <%= form_with url: root_path, method: :get do |f| %>
-        <%= f.select :skill, ["Cuisinier", "DJ", "Beau Gosse", "Clown", "Taxi", "Tatoueu(se)r", "Psy", "Poto"], selected: @buddies_skill %>
+        <%= f.select :skill, ["Chef", "DJ", "Hottie", "Clown", "Taxi", "Tattoo Artist", "Psy", "Web Dev"], selected: @buddies_skill %>
         <%= button_tag class: 'icon-look', type: 'submit' do %>
           <i class="fas fa-search text-pink-500" type="submit"></i>
         <% end %>
