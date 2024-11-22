@@ -48,7 +48,7 @@ file5 = URI.parse("https://lesnanasdpaname.com/wp-content/uploads/2020/11/neco-5
 buddy5.image.attach(io: file5, filename: "doodie.jpg", content_type: "image/jpg")
 buddy5.save!
 
-buddy6 = Buddy.new(first_name: "Lee",last_name: "Miller",email: "leemiller@gmail.com", skill: "Photographe/Vidéaste", description: "J'immortalise tout vos evenements", address: "Rue des Arts", price: 100, user: user)
+buddy6 = Buddy.new(first_name: "Lee",last_name: "Miller",email: "leemiller@gmail.com", skill: "Photo/Vidéo", description: "J'immortalise tout vos evenements", address: "Rue des Arts", price: 100, user: user)
 file6 = URI.parse("https://www.efet.fr/ecole-de-photographie/Qualites-photographe.jpg").open
 buddy6.image.attach(io: file6, filename: "lee.jpg", content_type: "image/jpg")
 buddy6.save!

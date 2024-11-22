@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 150px;
 }
 
 #card-buddy{
@@ -33,7 +34,7 @@
   border-radius: 5px;
   box-shadow: 0px 5px 5px #EAEAEA;
   position: fixed;
-  bottom: 10px;
+  bottom: 125px;
   right: 10px;
   z-index: 9999;
 }
