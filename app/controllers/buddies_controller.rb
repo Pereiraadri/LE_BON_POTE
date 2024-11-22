@@ -8,6 +8,9 @@ class BuddiesController < ApplicationController
 
   def index
     @buddies = Buddy.all
+
+    @buddies = @buddies.where(skill: params[:skill]) if params[:skill].present?
+
     @markers = @buddies.geocoded.map do |buddy|
       {
         lat: buddy.latitude,
@@ -16,18 +19,15 @@ class BuddiesController < ApplicationController
         marker_html: render_to_string(partial: "marker", locals: { buddy: buddy })
       }
     end
-
-    return unless params[:skill].present?
-
-    @buddies = @buddies.where(skill: params[:skill])
   end
 
   def create
     @buddy = Buddy.new(buddy_params)
     @buddy.user = current_user
     if @buddy.save
-      redirect_to root_path, alert: 'Buddy was successfully created.'
+      redirect_to root_path, notice: 'Buddy was successfully created.'
     else
+      flash[:alert] = 'Buddy was not created !'
       render :new, status: :unprocessable_entity
     end
   end
@@ -39,11 +39,8 @@ class BuddiesController < ApplicationController
   private
 
   def set_buddies
-    if params[:skill].present?
-      @buddies = @buddies.where(skill: params[:skill])
-    else
-      @buddies = []
-    end
+    @buddies_skill = params[:skill] ||= ""
+    @buddies = params[:skill].present? ? Buddy.where(skill: params[:skill]) : Buddy.all
   end
 
   def buddy_params
